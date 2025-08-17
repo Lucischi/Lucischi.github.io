@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Uncertainty Estimation with Diffusion Policy for Robotic Manipulation">
+  <meta name="keywords" content="Diffusion Policy, Robot-gated DAgger">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/robot_arm.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Sung-Wook Lee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Xuhui-Kang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Yen-Ling Kuo</a><sup>1</sup>,</span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Virginia,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2410.14868"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2410.14868"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/kDd4p2xxf6g"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sean1295/DiffDAgger/tree/main"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recently, diffusion policy has shown impressive results in handling multi-modal tasks in robotic manipulation. 
+            However, it has fundamental limitations in out-of-distribution failures that persist due to compounding errors and its limited capability to extrapolate. 
+            One way to address these limitations is robot-gated DAgger, an interactive imitation learning with a robot query system to actively seek expert help during policy rollout. 
+            While robot-gated DAgger has high potential for learning at scale, existing methods like Ensemble-DAgger struggle with highly expressive policies: They often misinterpret policy disagreements as uncertainty at multi-modal decision points.
+            To address this problem, we introduce Diff-DAgger, an efficient robot-gated DAgger algorithm that leverages the training objective of diffusion policy. 
+            We evaluate Diff-DAgger across different robot tasks including stacking, pushing, and plugging, and show that Diff-DAgger improves the task failure prediction by 39.0%, the task completion rate by 20.6%, and reduces the wall-clock time by a factor of 7.8. 
+            We hope that this work opens up a path for efficiently incorporating expressive yet data-hungry policies into interactive robot learning settings.
+          </p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/overview.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Can diffusion loss predict task failure?</h2>
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-4">Stacking</h2>
+          <p>
+            <!-- Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall. -->
+          </p>
+          <video id="stacking" autoplay muted loop playsinline height="60%">
+            <source src="./static/videos/stack_dloss.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+    <div class="column">
+      <div class="content"></div>
+        <h2 class="title is-4">Pushing</h2>
+          <p>
+          </p>
+          <video id="stacking" autoplay muted loop playsinline height="60%">
+            <source src="./static/videos/push_dloss.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+    <div class="column">
+      <div class="content"></div>
+        <h2 class="title is-4">Plugging</h2>
+        <video id="plugging" autoplay muted loop playsinline height="60%">
+          <source src="./static/videos/plug_desc.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Real World Demonstration</h2>
+    <video id="stacking" autoplay muted controls loop playsinline style="width: 100%; height: auto;">
+      <source src="./static/videos/real_world.mp4" type="video/mp4">
+    </video>
+    <div class="columns is-centered">
+  </div>
+
+    
+
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{lee2024diff,
+      title={Diff-DAgger: Uncertainty Estimation with Diffusion Policy for Robotic Manipulation}, 
+      author={Lee, Sung-Wook and Kang, Xuhui and Kuo, Yen-Ling},
+      booktitle={International Conference on Robotics and Automation (ICRA)},
+      year={2025}, 
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
